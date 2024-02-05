@@ -1,0 +1,13 @@
+.imagenCategoria {
+    width: 300px;
+}
+
+.tituloCategoria {
+    font-size: 30px;
+}
+.bloquePRoductos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px;
+}

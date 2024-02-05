@@ -1,0 +1,19 @@
+.carritoYContador{
+    position: relative;
+}
+
+.carritoIcon{
+    cursor: pointer;
+}
+
+.contador {
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    background-color: red;
+    border-radius: 40%;
+    position: relative;
+    right: 14px;
+    bottom: 20px;
+    cursor: pointer;
+}
