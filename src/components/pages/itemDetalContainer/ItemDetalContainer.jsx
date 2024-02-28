@@ -9,15 +9,14 @@ const ItemDetalContainer = () => {
   const [item, setItem] = useState({});
 
   useEffect(() => {
-    getOneProduct(parseInt(id))
+    getOneProduct(id)
       .then((res) => {
         setItem(res);
       })
       .catch((error) => {
         console.log(error);
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [id]);
 
   return Object.keys(item).length === 0 ? (
     <h2>vacio</h2>

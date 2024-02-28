@@ -130,7 +130,7 @@ export const getOneProduct = (id) => {
   return new Promise((resolve, reject) => {
     if (products.length > 0) {
 
-      const item = products.find((product) => product.id === id);
+      const item = products.find((product) => product.id === (+id));
 
       if (item) {
         resolve(item);
