@@ -1,18 +1,20 @@
-const ItemDetail = ({item}) => {
+import ItemCountContainer from "../../common/itemCount/ItemCountContainer";
 
-  const {title,img, description, price } = item
+const ItemDetail = ({ item }) => {
+  const { title, img, description, price, stock } = item;
 
   return (
-  <>
-    <article>
-      <h2>{title}</h2>
-      <img src={img} alt="" />
-      <p>{description}</p>
-      <p>Precio: ${price}</p>
-      <button> Comprar </button>
-    </article>
-  </>
-  )
+    <>
+      <article>
+        <h2>{title}</h2>
+        <img src={img} alt="" />
+        <p>{description}</p>
+        <p>Precio: ${price}</p>
+        <ItemCountContainer stock={stock} />
+        <button> Comprar </button>
+      </article>
+    </>
+  );
 };
 
 export default ItemDetail;

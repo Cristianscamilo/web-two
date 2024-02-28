@@ -28,7 +28,7 @@ const products = [
     description:
       "¡Experimenta la comodidad definitiva con nuestro Mouse Vertical Ergonómico! Con soporte reposamuñecas y diseño óptico, este mouse se adapta perfectamente a tus movimientos. Su forma de voluta biónica alivia la rigidez y la incomodidad del brazo, permitiéndote despedirte del estrés de la 'mano del ratón'. Aunque su diseño único puede requerir algo de tiempo para acostumbrarse, ¡te garantizamos una experiencia sin igual una vez que lo hagas!",
     img: "https://res.cloudinary.com/dzivhovxf/image/upload/v1706807443/webreact/mouse/Mouse%20Vertical%20Inalambrico%20Perif%C3%A9rico%20%C3%93ptico%20Delux%20Color%20Negro.webp",
-    stock: 1,
+    stock: 8,
     category: "mouse",
   },
   {

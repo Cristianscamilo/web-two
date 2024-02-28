@@ -1,20 +1,30 @@
 import { useState, useEffect } from "react";
 import { getProducts } from "../../../productsMock";
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
+  const { category } = useParams();
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    //manejo de promesa
     getProducts()
       .then((res) => {
-        setItems(res);
+        if (category) {
+          const productsInFilter = res.filter(
+            (product) => product.category === category
+          );
+          setItems(productsInFilter);
+        } else {
+          setItems(res);
+        }
       })
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [category]);
+
+  console.log(items);
 
   return <ItemList items={items} />;
 };

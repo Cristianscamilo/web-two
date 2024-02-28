@@ -1,18 +1,21 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/layout/navbar/Navbar";
-import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
-import ShoppingCarContainer from "./components/pages/shoppingCarContainer/ShoppingCarContainer";
-import ItemDetalContainer from "./components/pages/itemDetalContainer/ItemDetalContainer";
+import {
+  ItemDetalContainer,
+  ItemListContainer,
+  ShoppingCarContainer,
+} from "./components/pages";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-          <Navbar />
+        <Navbar />
         <Routes>
-          <Route path="/" element={ <ItemListContainer /> } />
-          <Route path="/shopingCar" element={<ShoppingCarContainer/>} />
-          <Route path="/item/:id" element={ <ItemDetalContainer/> } />
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:category" element={<ItemListContainer />} />
+          <Route path="/shopingCar" element={<ShoppingCarContainer />} />
+          <Route path="/item/:id" element={<ItemDetalContainer />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,28 +1,19 @@
-import ItemCount from "./itemCount";
-import { useState } from "react";
+import { useCount } from "../../../hooks/useCount";
+import ItemCount from "./ItemCount";
 
 const ItemCountContainer = ({ stock }) => {
-  const [counter, setCounter] = useState(1);
+  const { counter, addOne, subOne } = useCount(1, stock);
 
-  const addOne = () => {
-    if (counter < stock) {
-      setCounter(counter + 1);
-    } else {
-      alert("Stock Maximo");
-    }
-  };
-
-  const subOne = () => {
-    if (counter > 1) {
-      setCounter(counter - 1);
-    }
-  };
-
-  return(
+  return (
     <>
-      <ItemCount counter={counter} addOne={addOne} subOne={subOne} />
+      <ItemCount
+        counter={counter}
+        addOne={addOne}
+        subOne={subOne}
+        stock={stock}
+      />
     </>
-  )
+  );
 };
 
 export default ItemCountContainer;

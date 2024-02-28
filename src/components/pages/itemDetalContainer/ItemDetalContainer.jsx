@@ -16,11 +16,14 @@ const ItemDetalContainer = () => {
       .catch((error) => {
         console.log(error);
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-
-  return Object.keys(item).length === 0 ? <h2>vacio</h2> : <ItemDetail item={item}/>;
+  return Object.keys(item).length === 0 ? (
+    <h2>vacio</h2>
+  ) : (
+    <ItemDetail item={item} />
+  );
 };
 
 export default ItemDetalContainer;

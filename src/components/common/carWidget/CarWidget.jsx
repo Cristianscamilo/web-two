@@ -3,8 +3,12 @@ import { FaCartShopping } from "react-icons/fa6";
 
 const CarWidget = () => {
   return (
-    <div className={styles.carritoYContador}> 
-      <FaCartShopping color="orange" size="2em" className={styles.carritoIcon} />
+    <div className={styles.carritoYContador}>
+      <FaCartShopping
+        color="orange"
+        size="2em"
+        className={styles.carritoIcon}
+      />
       <span className={styles.contador}>10</span>
     </div>
   );

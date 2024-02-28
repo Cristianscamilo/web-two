@@ -5,13 +5,7 @@ const ItemList = ({ items }) => {
     <>
       {items.map(({ id, title, img, price }) => {
         return (
-          <ProductCard
-            key={id}
-            title={title}
-            img={img}
-            price={price}
-            id={id}
-          />
+          <ProductCard key={id} title={title} img={img} price={price} id={id} />
         );
       })}
     </>

@@ -1,23 +1,23 @@
 .logo {
-    width: 100px;
-    margin: 10px;
+  width: 100px;
+  margin: 10px;
 }
 
-.listaYCarrito{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: 10px;
+.listaYCarrito {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .lista {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
 }
 
 li {
-    margin: 10px;
-    cursor: pointer;
+  margin: 10px;
+  cursor: pointer;
 }
