@@ -6,7 +6,7 @@ const ItemDetail = ({ item }) => {
   return (
     <>
       <article>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <img src={img} alt="" />
         <p>{description}</p>
         <p>Precio: ${price}</p>

@@ -1,6 +1,7 @@
 import styles from "./Navbar.module.css";
 import CarWidget from "../../common/carWidget/CarWidget";
 import { Link } from "react-router-dom";
+
 export const Navbar = () => {
   return (
     <>

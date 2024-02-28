@@ -4,9 +4,9 @@ const ItemCount = ({ counter, addOne, subOne, stock }) => {
       <button onClick={addOne} disabled={counter < stock ? false : true}>
         Añadir unidad
       </button>
-      <h3>
+      <h4>
         {counter} de {stock} Unidades en Stock
-      </h3>
+      </h4>
       <button onClick={subOne} disabled={counter === 1 ? true : false}>
         Restar unidad
       </button>

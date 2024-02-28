@@ -1,0 +1,41 @@
+.cartGeneral{
+    margin: 10px;
+    background-color: #123c6e;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 540px;
+    padding: 20px;
+    align-items: center;
+    
+}
+
+.titleCart{
+    font-size: 22px;
+    width: 310px;
+    margin: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sizeImgGeneral{
+    border-radius: 10%;
+    padding: 2px;
+    width: 70%;
+}
+
+.priceCart{
+    font-size: 15px;
+    font-weight: 200;
+    color: #fff;
+    margin: 20px;
+}
+
+.buttonCart{
+    width: 100px;
+    height: 30px;
+    background-color: #fff;
+    color: #123c6e;
+    border: none;
+}
+
