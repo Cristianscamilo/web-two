@@ -34,7 +34,7 @@ const products = [
   {
     id: 4,
     title:
-      "Smartwatch Haylou LS16 Tactical 1.43' caja 45mm de abs negra, malla negra de silicona y bisel negro de metal RT3",
+      "Smartwatch Haylou LS16 Tactical 1.43'",
     price: 186316,
     description:
       "¡Descubre el nuevo estándar de elegancia y funcionalidad con el Smartwatch Haylou! Con tecnología de vanguardia y calidad excepcional, este reloj inteligente es tu compañero ideal en el deporte, el trabajo y el tiempo libre. Desde el seguimiento de la actividad física hasta las notificaciones inteligentes, cada función está diseñada para enriquecer tu vida diaria con estilo y conveniencia. Eleva tu experiencia con el Smartwatch Haylou.",
@@ -95,7 +95,7 @@ const products = [
   {
     id: 10,
     title:
-      "Logitech K400 Plus, Teclado Inalámbrico Touch, Pc Android Tv Color del teclado Negro Idioma Español",
+      "Logitech K400 Plus, Teclado Inalámbrico Touch, Pc Android Tv teclado Negro.",
     price: 186329,
     description:
       "Experimenta el máximo rendimiento en juegos con el teclado Logitech. Diseñado para expresar tu estilo y habilidades, mejora tu experiencia de gaming y lleva tus jugadas al siguiente nivel. Ideal para aficionados y expertos, disfruta de horas ilimitadas de diversión y competición.",
@@ -106,7 +106,7 @@ const products = [
   {
     id: 11,
     title:
-      "Logitech K380, Teclado Multi-dispositivo Bluetooth Color del teclado Grafito Idioma Español",
+      "Logitech K380, Teclado Multi-dispositivo Bluetooth Color del teclado Grafito",
     price: 149900,
     description:
       "Experimenta la libertad de escribir en cualquier lugar con el teclado portátil K380 de Logitech. Conecta fácilmente hasta tres dispositivos Bluetooth y cambia entre ellos con solo pulsar un botón. Ligero y compacto, este teclado inalámbrico es perfecto para trabajar en casa o en movimiento con tu smartphone, tablet o computadora.",
