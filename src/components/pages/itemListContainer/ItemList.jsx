@@ -6,7 +6,7 @@ const ItemList = ({ items }) => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
           {items.map(({ id, title, img, price }) => {
             return (
               <ProductCard

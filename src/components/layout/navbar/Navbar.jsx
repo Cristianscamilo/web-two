@@ -11,7 +11,7 @@ export const Navbar = () => {
           alt="logo comercio"
         />
       </Link>
-      <h1>CommerceCP</h1>
+      <h1 className={styles.title}>CommerceCP</h1>
       <div className={styles.listaYCarrito}>
         <ul className={styles.lista}>
           <Link to="/">

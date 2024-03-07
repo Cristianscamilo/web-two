@@ -1,15 +1,29 @@
+import { Button } from "@mui/material";
+
 const ItemCount = ({ counter, addOne, subOne, stock }) => {
   return (
     <>
-      <button onClick={addOne} disabled={counter < stock ? false : true}>
-        Añadir unidad
-      </button>
+      <Button
+        size="small"
+        color="warning"
+        variant="outlined"
+        onClick={subOne}
+        disabled={counter === 1 ? true : false}
+      >
+        -
+      </Button>
       <h3>
-        {counter} de {stock} Unidades en Stock
+        {counter}/{stock}
       </h3>
-      <button onClick={subOne} disabled={counter === 1 ? true : false}>
-        Restar unidad
-      </button>
+      <Button
+        size="small"
+        color="success"
+        variant="outlined"
+        onClick={addOne}
+        disabled={counter < stock ? false : true}
+      >
+        +
+      </Button>
     </>
   );
 };

@@ -36,7 +36,7 @@ export const ProductCard = ({ title, img, price, id }) => {
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions>
+          <CardActions style={{justifyContent: "center"}}>
               <Link to={`/item/${id}`}>
                 <Button size="small" color="info" variant="contained" sx={{ justifyContent: 'center' }}>
                   Ir al Producto
