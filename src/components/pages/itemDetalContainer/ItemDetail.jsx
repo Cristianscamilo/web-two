@@ -11,6 +11,7 @@ const ItemDetail = ({ item }) => {
 
   return (
     <>
+    <div style={{minHeight: '50vh' }}>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={0} alignItems="center">
           <Grid item xs={12} sm={6} md={6} lg={6} display="flex"justifyContent="center"  alignItems="center">
@@ -50,6 +51,7 @@ const ItemDetail = ({ item }) => {
           </Grid>
         </Grid>
       </Box>
+    </div>
     </>
   );
 };

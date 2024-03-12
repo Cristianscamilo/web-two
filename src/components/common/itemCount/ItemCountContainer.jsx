@@ -2,7 +2,7 @@ import { useCount } from "../../../hooks/useCount";
 import ItemCount from "./ItemCount";
 
 const ItemCountContainer = ({ stock }) => {
-  const { counter, addOne, subOne } = useCount(1, stock);
+  const { counter, addOne, subOne } = useCount( 1, stock );
 
   return (
     <>

@@ -9,7 +9,7 @@ const ItemDetalContainer = () => {
   const [item, setItem] = useState({});
 
   useEffect(() => {
-    getOneProduct(parseInt(id))
+    getOneProduct(+id)
       .then((res) => {
         setItem(res);
       })
