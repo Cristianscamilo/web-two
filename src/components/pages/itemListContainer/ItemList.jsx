@@ -5,8 +5,8 @@ import Grid from "@mui/material/Grid";
 const ItemList = ({ items }) => {
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
+      <Box sx={{ flexGrow: 1 }} style={{padding:'30px' }}>
+        <Grid container spacing={1}>
           {items.map(({ id, title, img, price }) => {
             return (
               <ProductCard

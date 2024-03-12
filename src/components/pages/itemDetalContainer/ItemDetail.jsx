@@ -41,7 +41,7 @@ const ItemDetail = ({ item }) => {
                   variant="contained"
                   sx={{ justifyContent: "center" }}
                 >
-                  Comprar
+                  Agregar al carrito
                 </Button>
               </CardActions>
             </Card>

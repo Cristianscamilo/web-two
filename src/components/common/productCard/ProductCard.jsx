@@ -18,8 +18,8 @@ const Item = styled(Paper)(({ theme }) => ({
 export const ProductCard = ({ title, img, price, id }) => {
   return (
     <>
-      <Grid item xs={12} sm={6} lg={4}>
-        <Item>
+      <Grid item xs={12} sm={12} lg={4}>
+        <Item style={{height: '400px'}}>
           <CardActionArea>
             <CardMedia component="img" height="140" image={img} alt={title} />
             <CardContent>
