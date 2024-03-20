@@ -24,6 +24,14 @@ const ItemCount = ({ counter, addOne, subOne, stock }) => {
       >
         +
       </Button>
+      <Button
+        size="small"
+        color="primary"
+        variant="contained"
+        sx={{ justifyContent: "center" }}
+      >
+        Agregar al carrito
+      </Button>
     </>
   );
 };

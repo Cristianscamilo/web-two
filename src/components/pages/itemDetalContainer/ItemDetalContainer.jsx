@@ -18,6 +18,8 @@ const ItemDetalContainer = () => {
       });
   }, [id]);
 
+  console.log(item);
+
   return Object.keys(item).length > 0 && <ItemDetail item={item} />;
 };
 

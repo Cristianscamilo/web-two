@@ -2,7 +2,7 @@ import ItemCountContainer from "../../common/itemCount/ItemCountContainer";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { CardActionArea, CardActions } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
@@ -34,15 +34,7 @@ const ItemDetail = ({ item }) => {
                 </CardContent>
               </CardActionArea>
               <CardActions style={{justifyContent: "center"}}>
-                <ItemCountContainer stock={stock} />
-                <Button
-                  size="small"
-                  color="primary"
-                  variant="contained"
-                  sx={{ justifyContent: "center" }}
-                >
-                  Agregar al carrito
-                </Button>
+                <ItemCountContainer stock={stock} />   
               </CardActions>
             </Card>
           </Grid>
