@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 
-const ItemCount = ({ counter, addOne, subOne, stock }) => {
+const ItemCount = ({ counter, addOne, subOne, stock, onAdd }) => {
   return (
     <>
       <Button
@@ -29,6 +29,7 @@ const ItemCount = ({ counter, addOne, subOne, stock }) => {
         color="primary"
         variant="contained"
         sx={{ justifyContent: "center" }}
+        onClick={()=>{onAdd(counter)}}
       >
         Agregar al carrito
       </Button>

@@ -6,7 +6,7 @@ import { CardActionArea, CardActions } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd }) => {
   const { title, img, description, price, stock } = item;
 
   return (
@@ -34,7 +34,7 @@ const ItemDetail = ({ item }) => {
                 </CardContent>
               </CardActionArea>
               <CardActions style={{justifyContent: "center"}}>
-                <ItemCountContainer stock={stock} />   
+                <ItemCountContainer stock={stock} onAdd={onAdd} />   
               </CardActions>
             </Card>
           </Grid>

@@ -27,7 +27,7 @@ export const Navbar = () => {
             <li>Smartwhatch</li>
           </Link>
         </ul>
-        <Link to="/shopingCar">
+        <Link to="/cart">
           <CarWidget />
         </Link>
       </div>
