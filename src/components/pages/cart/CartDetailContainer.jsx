@@ -15,7 +15,7 @@ export const CartDetailContainer = () => {
     <>
       <div style={{ padding: "20px", minHeight: "40vh" }}>
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={1} alignItems="right">
+          <Grid container spacing={3} alignItems="right">
             <Grid item xs={12} sm={6} md={6} lg={6}>
               {cart.map(({ id, title, quantity }) => {
                 return (
