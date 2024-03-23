@@ -15,7 +15,7 @@ const CartContextProvider = ({ children }) => {
     if (existe) {
       let newChanges = cart.map((element) => {
         if (element.id === product.id) {
-          return { ...element, quantity: element.quantity + product.quantity };
+          return { ...element, quantity:  product.quantity };
         } else {
           return element;
         }
@@ -29,16 +29,43 @@ const CartContextProvider = ({ children }) => {
     setCart([]);
   };
 
-  const removeByID = (id)=>{
-   let newChanges = cart.filter((element)=> element.id !== id)
-   setCart(newChanges)
+  const removeByID = (id) => {
+    let newChanges = cart.filter((element) => element.id !== id);
+    setCart(newChanges);
+  };
+
+  const getTotalItems = () => {
+    let total = cart.reduce((acc, element) => {
+      return acc + element.quantity;
+    }, 0);
+    return total;
+  };
+
+  const getTotalPrice = () => {
+    let total = cart.reduce((acc, element) => {
+      return acc + (element.quantity * element.price)
+    }, 0);
+    return total;
+  };
+
+  const getTotalQuantityById = ( id )=>{
+    let product = cart.find( (element)=> element.id === id)
+   if (product) {
+    return product.quantity
+   }else{
+    return product
+   }
   }
+
 
   let data = {
     cart,
     addToCart,
     clearCart,
-    removeByID
+    removeByID,
+    getTotalItems,
+    getTotalPrice,
+    getTotalQuantityById,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

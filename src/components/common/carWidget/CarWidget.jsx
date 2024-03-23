@@ -4,7 +4,8 @@ import { useContext } from "react";
 import {CartContext} from "../../context/CartContext";
 
 const CarWidget = () => {
-  const {cart} = useContext( CartContext )
+  const { getTotalItems } = useContext( CartContext )
+  let total = getTotalItems()
   return (
     <div className={styles.carritoYContador}>
       <FaCartShopping
@@ -12,7 +13,7 @@ const CarWidget = () => {
         size="2em"
         className={styles.carritoIcon}
       />
-      <span className={styles.contador}>{cart.length}</span>
+      <span className={styles.contador}>{total}</span>
     </div>
   );
 };

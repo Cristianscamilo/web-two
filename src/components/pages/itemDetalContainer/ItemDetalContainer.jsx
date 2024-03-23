@@ -8,7 +8,9 @@ const ItemDetalContainer = () => {
   const { id } = useParams();
 
   const [item, setItem] = useState({});
-  const {addToCart} = useContext(CartContext)
+  const {addToCart, getTotalQuantityById} = useContext(CartContext)
+  let initial = getTotalQuantityById(+id)
+  
 
   useEffect(() => {
     getOneProduct(+id)
@@ -25,7 +27,7 @@ const ItemDetalContainer = () => {
     addToCart(infoProduct)
     }
 
-  return Object.keys(item).length > 0 && <ItemDetail item={item} onAdd={onAdd} />;
+  return Object.keys(item).length > 0 && <ItemDetail item={item} onAdd={onAdd} initial={initial} />;
 };
 
 export default ItemDetalContainer;
