@@ -9,7 +9,7 @@ const CarWidget = () => {
   return (
     <div className={styles.carritoYContador}>
       <FaCartShopping
-        color="orange"
+        color="white"
         size="2em"
         className={styles.carritoIcon}
       />

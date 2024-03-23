@@ -1,21 +1,27 @@
-const CartDetail = ({ cart, clearCart, removeByID, totalPrice }) => {
+import { Button } from "@mui/material";
+import Card from "@mui/material/Card";
+import { CardActionArea, CardActions } from "@mui/material";
+
+const CartDetail = ({ id, title, quantity, removeByID }) => {
   return (
     <div>
-      {cart.map(({ id, title, quantity }) => (
-        <div key={id}>
-          <h2>Nombre: {title}</h2>
-          <h2>cantidad: {quantity}</h2>
-          <button onClick={() => removeByID(id)}>remover elemento</button>
-        </div>
-      ))}
-      {cart.length !== 0 ? (
-        <div>
-          <h2>Total a pagar: ${totalPrice.toLocaleString()}</h2>
-          <button onClick={clearCart}>limpiar carrito</button>
-        </div>
-      ) : (
-        <h2>Tu carrito esta vacio</h2>
-      )}
+      <Card sx={{ maxWidth: 600 }}>
+      <CardActionArea>
+      <h3>{title} </h3>
+      <h4>cantidad: {quantity} </h4>
+      <CardActions style={{ justifyContent: "right" }}>
+      <Button
+        size="small"
+        color="warning"
+        variant="outlined"
+        sx={{ justifyContent: "center" }}
+        onClick={() => removeByID(id)}
+      >
+        Remover del carrito
+      </Button>
+      </CardActions>
+      </CardActionArea>
+      </Card>
     </div>
   );
 };

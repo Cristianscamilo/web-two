@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import {
-  CartContainer,
+  CartDetailContainer,
   ItemDetalContainer,
   ItemListContainer,
 } from "./components/pages";
@@ -19,7 +19,7 @@ function App() {
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:category" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetalContainer />} />
-            <Route path="/cart" element={<CartContainer />} />
+            <Route path="/cart" element={<CartDetailContainer />} />
           </Route>
             <Route path="*" element={<h1>404 not found....pendiente crear page</h1>} />
         </Routes>
