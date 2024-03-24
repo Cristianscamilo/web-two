@@ -40,25 +40,28 @@ const ItemDetail = ({ item, onAdd, initial }) => {
                     >
                       Precio: ${price} U.
                     </Typography>
-                    {initial >= 1 ? (<>
-                      <Typography
-                        variant="h7"
-                        color="text.secondary"
-                        align={"right"}
-                      >
-                        Actualmente tienes {initial} Unid de este producto en tu carrito
-                      </Typography>
-                      </>) : (<>
+                    {initial >= 1 ? (
+                      <>
                         <Typography
-                        variant="h7"
-                        color="primary"
-                        align={"right"}
-                      >
-                        Aún no tienes este producto en tu carrito
-                      </Typography>
+                          variant="h7"
+                          color="text.secondary"
+                          align={"right"}
+                        >
+                          Actualmente tienes {initial} Unid de este producto en
+                          tu carrito
+                        </Typography>
                       </>
-                      )
-                    }
+                    ) : (
+                      <>
+                        <Typography
+                          variant="h7"
+                          color="primary"
+                          align={"right"}
+                        >
+                          Aún no tienes este producto en tu carrito
+                        </Typography>
+                      </>
+                    )}
                   </CardContent>
                 </CardActionArea>
                 <CardActions style={{ justifyContent: "center" }}>

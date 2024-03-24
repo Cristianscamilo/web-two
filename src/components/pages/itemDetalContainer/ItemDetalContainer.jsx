@@ -1,25 +1,24 @@
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { useContext, useEffect, useState } from "react";
-import { getOneProduct } from "../../../productsMock";
 import { CartContext } from "../../context/CartContext";
+import { db } from "../../../firebaseConfig";
+import { collection, doc, getDoc } from "firebase/firestore"
 
 const ItemDetalContainer = () => {
   const { id } = useParams();
 
   const [item, setItem] = useState({});
   const {addToCart, getTotalQuantityById} = useContext(CartContext)
-  let initial = getTotalQuantityById(+id)
+  let initial = getTotalQuantityById(id)
   
 
   useEffect(() => {
-    getOneProduct(+id)
-      .then((res) => {
-        setItem(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+   let productsCollection = collection( db, "products")
+   let refDoc = doc(productsCollection, id )
+   getDoc (refDoc).then(res => {
+    setItem({...res.data(), id: res.id})
+   }) 
   }, [id]);
 
   const onAdd = (cantidad)=>{
