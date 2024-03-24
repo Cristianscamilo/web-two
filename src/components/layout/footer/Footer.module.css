@@ -1,0 +1,25 @@
+.footer{
+    margin: 10px 0px 0px 0px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.logoFoter{
+width: 50px;
+border-radius: 50%;
+margin: 10px 100px 0 0;
+}
+
+.listaFotter{
+    margin: 10px;
+    list-style-type: none;
+}
+
+.listaFotter li {
+cursor: pointer;
+font-size: 12px;
+}

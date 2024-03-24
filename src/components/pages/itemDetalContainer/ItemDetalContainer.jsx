@@ -1,28 +1,32 @@
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import { useEffect, useState } from "react";
-import { getOneProduct } from "../../../productsMock";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../../context/CartContext";
+import { db } from "../../../firebaseConfig";
+import { collection, doc, getDoc } from "firebase/firestore"
 
 const ItemDetalContainer = () => {
   const { id } = useParams();
 
   const [item, setItem] = useState({});
+  const {addToCart, getTotalQuantityById} = useContext(CartContext)
+  let initial = getTotalQuantityById(id)
+  
 
   useEffect(() => {
-    getOneProduct(id)
-      .then((res) => {
-        setItem(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+   let productsCollection = collection( db, "products")
+   let refDoc = doc(productsCollection, id )
+   getDoc (refDoc).then(res => {
+    setItem({...res.data(), id: res.id})
+   }) 
   }, [id]);
 
-  return Object.keys(item).length === 0 ? (
-    <h2>vacio</h2>
-  ) : (
-    <ItemDetail item={item} />
-  );
+  const onAdd = (cantidad)=>{
+    let infoProduct = {...item, quantity: cantidad};
+    addToCart(infoProduct)
+    }
+
+  return Object.keys(item).length > 0 && <ItemDetail item={item} onAdd={onAdd} initial={initial} />;
 };
 
 export default ItemDetalContainer;

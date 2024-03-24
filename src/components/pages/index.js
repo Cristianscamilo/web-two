@@ -1,3 +1,3 @@
-export { default as ShoppingCarContainer } from "./shoppingCarContainer/ShoppingCarContainer";
-export * from "./itemDetalContainer";
-export * from "./itemListContainer";
+export * from './cart';
+export * from './itemDetalContainer';
+export * from './itemListContainer';

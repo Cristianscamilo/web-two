@@ -1,15 +1,26 @@
 import { ProductCard } from "../../common/productCard/ProductCard";
-import styles from "./ItemList.module.css";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 
 const ItemList = ({ items }) => {
   return (
-    <section className={styles.containerCarts}>
-      {items.map(({ id, title, img, price }) => {
-        return (
-          <ProductCard key={id} title={title} img={img} price={price} id={id} />
-        );
-      })}
-    </section>
+    <>
+      <Box sx={{ flexGrow: 1 }} style={{padding:'30px' }}>
+        <Grid container spacing={1}>
+          {items.map(({ id, title, img, price }) => {
+            return (
+              <ProductCard
+                key={id}
+                title={title}
+                img={img}
+                price={price}
+                id={id}
+              />
+            );
+          })}
+        </Grid>
+      </Box>
+    </>
   );
 };
 
