@@ -1,6 +1,8 @@
-import { useState, useContext } from "react";
+import { useContext, useState } from "react";
 import { Checkout } from "./Checkout";
 import { CartContext } from "../../context/CartContext";
+import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
+import { db } from "../../../firebaseConfig";
 
 export const CheckoutContainer = () => {
   const [userInfo, setUserInfo] = useState({
@@ -9,9 +11,10 @@ export const CheckoutContainer = () => {
     email: "",
   });
 
-  const { cart, getTotalItems } = useContext(CartContext);
+  const [orderId, setOrderId] = useState(null);
 
-  let totalPrice = getTotalItems()
+  const { cart, getTotalPrice, clearCart } = useContext(CartContext);
+  let totalPrice = getTotalPrice();
 
   const envioDeFormulario = (event) => {
     event.preventDefault();
@@ -20,14 +23,28 @@ export const CheckoutContainer = () => {
       buyer: userInfo,
       items: cart,
       total: totalPrice,
-    }
+    };
 
-    console.log(order);
+    let ordersCollection = collection(db, "orders");
+
+    addDoc(ordersCollection, order).then((res) => setOrderId(res.id));
+
+    cart.forEach((product) => {
+      let refDoc = doc(db, "products", product.id);
+      updateDoc(refDoc, { stock: product.stock - product.quantity });
+    });
+    clearCart();
   };
 
   const capturar = (event) => {
     setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
   };
 
-  return <Checkout envioDeFormulario={envioDeFormulario} capturar={capturar} />;
+  return (
+    <Checkout
+      orderId={orderId}
+      envioDeFormulario={envioDeFormulario}
+      capturar={capturar}
+    />
+  );
 };

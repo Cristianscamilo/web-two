@@ -1,3 +1,3 @@
 export * from './cart';
-export * from './itemDetalContainer';
+export * from './itemDetailContainer';
 export * from './itemListContainer';

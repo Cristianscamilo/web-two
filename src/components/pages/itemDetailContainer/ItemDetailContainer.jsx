@@ -5,20 +5,25 @@ import { CartContext } from "../../context/CartContext";
 import { db } from "../../../firebaseConfig";
 import { collection, doc, getDoc } from "firebase/firestore"
 
-const ItemDetalContainer = () => {
+const ItemDetailContainer = () => {
   const { id } = useParams();
 
   const [item, setItem] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+
   const {addToCart, getTotalQuantityById} = useContext(CartContext)
   let initial = getTotalQuantityById(id)
   
 
   useEffect(() => {
+    setIsLoading(true)
+
    let productsCollection = collection( db, "products")
    let refDoc = doc(productsCollection, id )
    getDoc (refDoc).then(res => {
     setItem({...res.data(), id: res.id})
    }) 
+   .finally(()=> setIsLoading(false))
   }, [id]);
 
   const onAdd = (cantidad)=>{
@@ -26,7 +31,15 @@ const ItemDetalContainer = () => {
     addToCart(infoProduct)
     }
 
-  return Object.keys(item).length > 0 && <ItemDetail item={item} onAdd={onAdd} initial={initial} />;
+    return (
+      <>
+        {isLoading ? (
+          <h2>Cargando producto...</h2>
+        ) : (
+          <ItemDetail item={item} onAdd={onAdd} initial={initial} />
+        )}
+      </>
+    );
 };
 
-export default ItemDetalContainer;
+export default ItemDetailContainer;

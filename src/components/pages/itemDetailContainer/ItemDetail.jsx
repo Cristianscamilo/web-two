@@ -1,4 +1,3 @@
-import styles from "./ItemDetail.module.css";
 import ItemCountContainer from "../../common/itemCount/ItemCountContainer";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";

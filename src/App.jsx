@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import {
   CartDetailContainer,
-  ItemDetalContainer,
+  ItemDetailContainer,
   ItemListContainer,
 } from "./components/pages";
 import Layout from "./components/layout/Layout";
@@ -19,7 +19,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:category" element={<ItemListContainer />} />
-            <Route path="/item/:id" element={<ItemDetalContainer />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<CartDetailContainer />} />
             <Route path="/checkout" element={<CheckoutContainer />} />
           </Route>

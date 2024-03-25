@@ -63,7 +63,6 @@ export const CartDetailContainer = () => {
                         color="primary"
                         variant="contained"
                         sx={{ justifyContent: "right" }}
-                        onClick={clearCart}
                       >
                         Ir a Pagar
                       </Button>

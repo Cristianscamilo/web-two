@@ -1,8 +1,9 @@
-
-
-export const Checkout = ({ envioDeFormulario, capturar }) => {
+export const Checkout = ({ envioDeFormulario, capturar, orderId }) => {
   return (
     <div>
+      {orderId ? (
+        <h2>Gracias por tu compra, el numero de confirmación es {orderId}</h2>
+      ) : (
         <form onSubmit={envioDeFormulario}>
           <input
             type="text"
@@ -17,7 +18,6 @@ export const Checkout = ({ envioDeFormulario, capturar }) => {
             onChange={capturar}
             name="phone"
           />
-
           <input
             type="text"
             placeholder="Ingresa tu email"
@@ -27,6 +27,7 @@ export const Checkout = ({ envioDeFormulario, capturar }) => {
 
           <button type="submit">Comprar</button>
         </form>
+      )}
     </div>
   );
 };
