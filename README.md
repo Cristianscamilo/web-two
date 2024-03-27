@@ -4,7 +4,18 @@
 
 ![](https://res.cloudinary.com/dzivhovxf/image/upload/v1706808980/webreact/zorroia.jpg)
 
-[Google](https://www.google.com/)
+## Esquemas
+[excalidraw](https://excalidraw.com/)
+
+
+
+## cloudinary
+[imagenes](https://console.cloudinary.com/)
+
+## Libreria de iconos
+[React Icons](https://react-icons.github.io/react-icons/search/#q=bag)
+
+
 
 ```
 npm i react-router-dom
@@ -24,7 +35,9 @@ npm install @mui/icons-material
 npm install @mui/material @emotion/react @emotion/styled --force
 ```
 
-#### configurar las variables:
+#### configurar las variables Firebase:
+[Firebase](https://firebase.google.com/?hl=es-419)
+
 
 - VITE_APIKEY=
 - VITE_AUTH_DOMAIN=
@@ -33,8 +46,8 @@ npm install @mui/material @emotion/react @emotion/styled --force
 - VITE_MESAGING=
 - VITE_APP_ID=
 
-### Deploy:
+### Deploy
 
-```
-https://web-two-cyan.vercel.app/
-```
+[CommerceCP](https://web-two-cyan.vercel.app/)
+
+[vercel](https://vercel.com/login)
