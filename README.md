@@ -1,8 +1,34 @@
-# React + Vite
+# Ecomerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Proyecto react JS
 
-Currently, two official plugins are available:
+![](https://res.cloudinary.com/dzivhovxf/image/upload/v1706808980/webreact/zorroia.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Google](https://www.google.com/)
+
+```
+npm i react-router-dom
+```
+```
+npm install @mui/material @emotion/react @emotion/styled
+```
+```
+npm install @fontsource/roboto
+
+```
+```
+npm install @mui/icons-material
+```
+
+```
+npm install @mui/material @emotion/react @emotion/styled --force
+```
+
+#### configurar las variables:
+
+- VITE_APIKEY=
+- VITE_AUTH_DOMAIN=
+- VITE_PROJECT=
+- VITE_STORAGE=
+- VITE_MESAGING=
+- VITE_APP_ID=

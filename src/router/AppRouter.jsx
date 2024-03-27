@@ -1,0 +1,16 @@
+import { Route, Routes } from "react-router-dom"
+import { routes } from "./routes"
+import Layout from "../components/layout/Layout"
+
+export const AppRouter = () => {
+  return (
+    <Routes>
+          <Route element={<Layout />}>
+            {
+              routes.map( ( {id, path, Element } )=> <Route key={id} path={path} element={<Element />}/>)
+            }
+          </Route>
+            <Route path="*" element={<h1>404 not found....pendiente crear page</h1>} />
+        </Routes>
+  )
+}

@@ -1,6 +1,8 @@
 import styles from "./Navbar.module.css";
 import CarWidget from "../../common/carWidget/CarWidget";
 import { Link } from "react-router-dom";
+import { menuNavigation } from "../../../router/menuNavigation";
+
 
 export const Navbar = () => {
   return (
@@ -15,22 +17,11 @@ export const Navbar = () => {
       <h1 className={styles.title}>CommerceCP</h1>
       <div className={styles.listaYCarrito}>
         <ul className={styles.lista}>
-          <Link to="/">
-            <li>Home</li>
-          </Link>
-          <Link to="/category/mouse">
-            <li>Mouses</li>
-          </Link>
-          <Link to="/category/teclados ">
-            <li>Teclados</li>
-          </Link>
-          <Link to="/category/smartwatch">
-            <li>Smartwhatch</li>
-          </Link>
+          {
+            menuNavigation.map(({id, text, path})=><Link key={id} path={path}><li>{text}</li></Link>)
+          }
         </ul>
-        <Link to="/cart">
           <CarWidget />
-        </Link>
       </div>
     </>
   );
