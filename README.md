@@ -32,3 +32,9 @@ npm install @mui/material @emotion/react @emotion/styled --force
 - VITE_STORAGE=
 - VITE_MESAGING=
 - VITE_APP_ID=
+
+### Deploy:
+
+```
+https://web-two-cyan.vercel.app/
+```
