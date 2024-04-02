@@ -15,8 +15,13 @@
 ## Libreria de iconos
 [React Icons](https://react-icons.github.io/react-icons/search/#q=bag)
 
-
-
+### npm
+```
+npm create vite@latest
+```
+```
+npm i
+```
 ```
 npm i react-router-dom
 ```
